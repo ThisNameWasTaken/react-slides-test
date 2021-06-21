@@ -1,8 +1,23 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonSlide,
+  IonSlides,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
+  const slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true,
+    loop: true,
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +31,24 @@ const Tab3: React.FC = () => {
             <IonTitle size="large">Tab 3</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+
+        <IonSlides pager={true} options={slideOpts}>
+          <IonSlide>
+            <div className="h-75">
+              <h2>Slide 1</h2>
+            </div>
+          </IonSlide>
+          <IonSlide>
+            <div className="h-75">
+              <h2>Slide 2</h2>
+            </div>
+          </IonSlide>
+          <IonSlide>
+            <div className="h-75">
+              <h2>Slide 3</h2>
+            </div>
+          </IonSlide>
+        </IonSlides>
       </IonContent>
     </IonPage>
   );
