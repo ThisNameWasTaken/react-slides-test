@@ -1,0 +1,7 @@
+{
+  "name": "react-slides-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
